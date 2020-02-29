@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
+
+	<bean id="BeanPersonel" class="com.furkankara.Personel">
+		<property name="listemiz">
+			<util:list list-class="java.util.ArrayList">
+				<value>Mert Bozkurt</value>
+				<value>Samet Aksoy</value>
+				<value>Burak Maden</value>
+			</util:list>		
+		</property>
+		
+	</bean>
+
+	<bean id="BeanPersonel2" class="com.furkankara.Personel">
+		<property name="setimiz">
+			<util:set set-class="java.util.HashSet">
+				<value>C</value>
+				<value>D</value>
+				<value>A</value>
+			</util:set>		
+		</property>
+		
+	</bean>
+	
+	
+	
+	<bean id="BeanSehir" class="com.furkankara.Sehir">
+		<property name="mapimiz">
+			
+		<util:map map-class="java.util.TreeMap" > 
+			<entry key="Ankara" value="06"></entry>
+			<entry key="Nevşehir" value="50"></entry>
+			<entry key="Adana" value="01"></entry>
+			<entry key="Ağrı" value="04"></entry>
+			<entry key="Trabzon" value="61"></entry>
+			<entry key="Balıkesir" value="10"></entry>
+		</util:map>
+		</property>
+	</bean>
+	
+	
+</beans>
